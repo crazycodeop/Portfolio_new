@@ -36,7 +36,7 @@ export const Header: NextComponentType = () => {
   return (
     <header>
       <nav className="py-4 sm:py-8 flex flex-row items-center justify-between mx-[0.5rem] sm:mx-0">
-        <h1 className="sm:hidden">Avinash</h1>
+        <h1 className="sm:hidden">Roshan</h1>
         <ul className="hidden sm:flex">
           {headerLinks.map((linkItem) => (
             <li key={linkItem.id}>
