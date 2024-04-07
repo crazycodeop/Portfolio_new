@@ -10,7 +10,7 @@ export const Experience: NextComponentType = () => (
     <div className="flex flex-wrap sm:flex-nowrap	 relative border-l border-l-gray-600 px-4 py-2  border-gray-400">
       <span className="w-2 h-2 bg-gray-600 -left-1 rounded-full absolute top-1/2 -translate-y-1/2" />
       <a
-        href="https://setu.co"
+        href="https://meavita.in/"
         target="_blank"
         rel="noopener noreferrer"
         className="w-16 h-16 flex items-center justify-center shadow-none hover:shadow-none text-foreground"
@@ -1192,7 +1192,7 @@ z"
     <div className="flex flex-wrap sm:flex-nowrap	 relative border-l border-l-gray-600 px-4 py-2  border-gray-400">
       <span className="w-2 h-2 bg-gray-600 -left-1 rounded-full absolute top-1/2 -translate-y-1/2" />
       <a
-        href="https://zeza.tech"
+        href="#"
         target="_blank"
         rel="noopener noreferrer"
         className="w-16 h-16 flex items-center justify-center shadow-none hover:shadow-none text-foreground"
