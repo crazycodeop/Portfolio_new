@@ -1162,7 +1162,7 @@ z"
           Dec 2022 - Feb 2023
         </p>
         <ul className="work dark:text-gray-400 text-gray-600">
-          <li>Core Responsibility: Scrape data from real estate sites</li>
+          <li>Core Responsibility: Scrape data from real estate sites.</li>
           <li>
             Created and implemented api to access the scraped data.
             {/* <a
