@@ -6,13 +6,13 @@ export const Skills = () => (
     <div className="text-md my-8 flex flex-col font-medium md:text-xl custom:text-lg">
       <p className="flex flex-row flex-wrap items-center border-b-[0.1px] border-gray-500 py-1 dark:text-slate-300 text-slate-600">
         <BsArrowRightShort size="30" />
-        <span className="dark:text-white font-bold">React.js</span>
-        &nbsp;as my Frontend Framework
+        <span className="dark:text-white font-bold">Django </span>
+        &nbsp;as my Backend Framework
       </p>
 
       <p className="flex flex-row flex-wrap items-center border-b-[0.1px] border-gray-500 py-1 dark:text-slate-300 text-slate-600">
         <BsArrowRightShort size="30" />
-        <span className="dark:text-white font-bold">Java and Javascript </span>
+        <span className="dark:text-white font-bold">Python and Javascript </span>
         &nbsp;as my main languages
       </p>
 
@@ -35,7 +35,8 @@ export const Skills = () => (
         Spring boot
       </span>
       , <span className="dark:text-white text-slate-600 font-bold">HTML5</span>,{' '}
-      <span className="dark:text-white text-slate-600 font-bold">CSS3 </span>{' '}
+      <span className="dark:text-white text-slate-600 font-bold">CSS3 </span>,{' '}
+      <span className="dark:text-white text-slate-600 font-bold">React.js </span>{' '}
     </p>
   </section>
 );

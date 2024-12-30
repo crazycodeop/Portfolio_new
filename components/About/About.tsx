@@ -8,9 +8,9 @@ export const About: NextComponentType = () => (
   <section className="my-8 flex flex-row items-center justify-between px-3">
     <div>
       <h1 className="text-4xl font-bold dark:text-white">Roshan</h1>
-      <p className="mt-1 text-lg">Fullstack Developer and a Student</p>
+      <p className="mt-1 text-lg">Software Engineer</p>
       <p className="mt-4 dark:text-gray-400 text-gray-500">
-        Building apps, proficient in Java and Web development.
+        Specializing in Python development, with a focus on designing and engineering efficient solutions.
       </p>
       {/* <Link href="https://avinashprj.hashnode.dev" passHref>
         <a
