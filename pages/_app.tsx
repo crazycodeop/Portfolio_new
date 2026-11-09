@@ -11,14 +11,16 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextSeo
-        title="Roshan Yadav — Backend & AI Engineer"
+        title="Roshan Yadav"
+        defaultTitle="Roshan Yadav"
+        titleTemplate="Roshan Yadav"
         description="Software Engineer with 2+ years of experience architecting scalable, cloud-native B2B SaaS platforms, distributed backend systems (Python, Django, FastAPI), AWS infrastructure, and enterprise GenAI architectures."
         canonical="https://roshanyadav.dev"
         openGraph={{
           type: 'website',
           locale: 'en_US',
           url: 'https://roshanyadav.dev',
-          title: 'Roshan Yadav — Backend & AI Engineer',
+          title: 'Roshan Yadav',
           description:
             'Software Engineer architecting scalable cloud-native B2B SaaS platforms and enterprise GenAI architectures.',
           site_name: 'Roshan Yadav',
