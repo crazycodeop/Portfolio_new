@@ -1,44 +1,15 @@
-import Document, {
-  DocumentContext,
-  DocumentInitialProps,
-  Html,
-  Head,
-  Main,
-  NextScript,
-} from 'next/document';
+import { Html, Head, Main, NextScript } from 'next/document';
 
-class MyDocument extends Document {
-  static async getInitialProps(
-    ctx: DocumentContext
-  ): Promise<DocumentInitialProps> {
-    const originalRenderPage = ctx.renderPage;
-
-    // Run the React rendering logic synchronously
-    ctx.renderPage = () =>
-      originalRenderPage({
-        // Useful for wrapping the whole react tree
-        enhanceApp: (App) => App,
-        // Useful for wrapping in a per-page basis
-        enhanceComponent: (Component) => Component,
-      });
-
-    // Run the parent `getInitialProps`, it now includes the custom `renderPage`
-    const initialProps = await Document.getInitialProps(ctx);
-
-    return initialProps;
-  }
-
-  render() {
-    return (
-      <Html className="dark" lang="en">
-        <Head />
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+export default function Document() {
+  return (
+    <Html lang="en" className="dark">
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <body className="bg-[#09090b] text-[#f4f4f5] antialiased">
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
 }
-
-export default MyDocument;

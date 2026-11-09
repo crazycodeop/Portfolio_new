@@ -1,11 +1,9 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import '@fontsource/jost/400.css';
-import '@fontsource/jost/500.css';
-import '@fontsource/jost/600.css';
-import '@fontsource/jost/700.css';
-import '@fontsource/sen/400.css';
-import '@fontsource/sen/700.css';
+import '@fontsource/inter/300.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
 
 import { NextSeo } from 'next-seo';
 
@@ -13,20 +11,31 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextSeo
-        title="Roshan Yadav"
-        titleTemplate="Roshan Yadav"
-        defaultTitle="Roshan Yadav"
-        description="Hey! I'm Roshan, A Fullstack Developer and a Student!"
-        // twitter={{
-        //   handle: '@avinash_prj',
-        //   site: '@avinash_prj',
-        //   cardType: 'summary_large_image',
-        // }}
+        title="Roshan Yadav — Backend & AI Engineer"
+        description="Software Engineer with 2+ years of experience architecting scalable, cloud-native B2B SaaS platforms, distributed backend systems (Python, Django, FastAPI), AWS infrastructure, and enterprise GenAI architectures."
+        canonical="https://roshanyadav.dev"
+        openGraph={{
+          type: 'website',
+          locale: 'en_US',
+          url: 'https://roshanyadav.dev',
+          title: 'Roshan Yadav — Backend & AI Engineer',
+          description:
+            'Software Engineer architecting scalable cloud-native B2B SaaS platforms and enterprise GenAI architectures.',
+          site_name: 'Roshan Yadav',
+        }}
         additionalMetaTags={[
           {
-            property: 'keywords',
+            name: 'keywords',
             content:
-              'Fullstack Developer, roshan, crazycodeop, Roshan Yadav, Web Developer, web development, web developer, tech enthusiast',
+              'Roshan Yadav, Backend Engineer, AI Engineer, Python, Django, FastAPI, Celery, PostgreSQL, AWS, Docker, RAG, LangChain, Supabase, VakilDesk',
+          },
+          {
+            name: 'author',
+            content: 'Roshan Yadav',
+          },
+          {
+            name: 'theme-color',
+            content: '#09090b',
           },
         ]}
       />

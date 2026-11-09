@@ -8,21 +8,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#010101',
+        background: '#09090b',
+        surface: '#111113',
+        'surface-elevated': '#18181b',
+        border: 'rgba(255, 255, 255, 0.08)',
+        muted: '#9ca3af',
+        subtle: '#6b7280',
       },
-
       fontFamily: {
-        jost: ['Jost', 'sans-serif'],
-        sen: ['Sen', 'sans-serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
-
-      screens: {
-        custom: '800px',
+      letterSpacing: {
+        widest: '.2em',
+        ultra: '.25em',
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };

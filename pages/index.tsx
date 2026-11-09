@@ -1,26 +1,30 @@
 import type { NextPage } from 'next';
 import {
+  Navbar,
+  Hero,
+  Experience,
+  Projects,
+  Stack,
   About,
   Contact,
-  Experience,
-  Header,
-  Projects,
-  Skills,
+  Footer,
 } from '../components';
 
-const Home: NextPage = () => (
-  <div className="px-2 sm:px-8 md:px-24 lg:px-48 xl:px-72 bg-white dark:bg-zinc-900 dark:text-gray-200">
-    <Header />
-    <main>
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-    </main>
-    <footer>
-      <Contact />
-    </footer>
-  </div>
-);
+const Home: NextPage = () => {
+  return (
+    <div className="bg-[#09090b] text-[#f4f4f5] min-h-screen selection:bg-neutral-800 selection:text-white antialiased overflow-x-hidden w-full">
+      <Navbar />
+      <main>
+        <Hero />
+        <Experience />
+        <Projects />
+        <Stack />
+        <About />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
 export default Home;

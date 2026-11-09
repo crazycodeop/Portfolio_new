@@ -1,22 +1,8 @@
-import { Header } from './Header/Header';
-import { TextLink } from './TextLinks/TextLinks';
-import { About } from './About/About';
-import { Skills } from './Skills/Skills';
-import { Projects } from './Projects/Projects';
-import { ProjectCard } from './ProjectCard/ProjectCard';
-import { ProjectDataTypes, projectsData } from './Projects/projectsData';
-import { Contact } from './Contact/Contact';
-import { Experience } from './Experience/Experience';
-
-export {
-  Header,
-  TextLink,
-  About,
-  Skills,
-  Projects,
-  ProjectCard,
-  projectsData,
-  Contact,
-  Experience,
-};
-export type { ProjectDataTypes };
+export { Navbar } from './Navbar/Navbar';
+export { Hero } from './Hero/Hero';
+export { Experience } from './Experience/Experience';
+export { Projects } from './Projects/Projects';
+export { Stack } from './Stack/Stack';
+export { About } from './About/About';
+export { Contact } from './Contact/Contact';
+export { Footer } from './Footer/Footer';
