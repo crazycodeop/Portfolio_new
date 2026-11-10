@@ -3,11 +3,11 @@ import React from 'react';
 const fullTimeExperience = {
   company: 'VakilDesk Technologies Pvt. Ltd.',
   role: 'Software Engineer',
-  period: 'OCT 2024 — PRESENT',
+  period: 'OCT 2024 — OCT 2026',
   type: 'Full-time',
   location: 'Remote',
   summary:
-    'Spearheading core backend architecture, AWS cloud infrastructure, and enterprise GenAI systems for mission-critical B2B legal tech SaaS platforms.',
+    'Spearheaded core backend architecture, AWS cloud infrastructure, and enterprise GenAI systems for mission-critical B2B legal tech SaaS platforms.',
   highlights: [
     'Spearheaded end-to-end architecture and technical requirements for 4 enterprise B2B SaaS platforms using React and Django, delivering 100% on-time across 10+ corporate clients.',
     'Engineered high-availability cloud infrastructure on AWS (EC2, S3, RDS) with Docker and Jenkins CI/CD—cutting deployment cycles by 35% with 99.9% SLA uptime, and reducing hosting costs by 50% via memory leak fixes and EC2 rightsizing (32 GiB to 8 GiB RAM).',
