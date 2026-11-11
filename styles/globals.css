@@ -46,3 +46,62 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #3f3f46;
 }
+
+/* 
+ * Invisible Ambient Light Environment
+ * Continuous, ultra-slow architectural drift (52s - 58s)
+ * Completely imperceptible as conventional animation
+ */
+@keyframes ambientDriftSlow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.95;
+  }
+  33% {
+    transform: translate3d(24px, -18px, 0) scale(1.03);
+    opacity: 1.05;
+  }
+  66% {
+    transform: translate3d(-18px, 22px, 0) scale(0.98);
+    opacity: 0.92;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.95;
+  }
+}
+
+@keyframes ambientDriftReverse {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.92;
+  }
+  40% {
+    transform: translate3d(-22px, 16px, 0) scale(1.02);
+    opacity: 1.02;
+  }
+  75% {
+    transform: translate3d(16px, -20px, 0) scale(0.97);
+    opacity: 0.88;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.92;
+  }
+}
+
+.ambient-drift-slow {
+  animation: ambientDriftSlow 52s ease-in-out infinite;
+}
+
+.ambient-drift-reverse {
+  animation: ambientDriftReverse 58s ease-in-out infinite;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .ambient-drift-slow,
+  .ambient-drift-reverse {
+    animation: none !important;
+  }
+}

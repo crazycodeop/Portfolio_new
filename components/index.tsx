@@ -6,3 +6,4 @@ export { Stack } from './Stack/Stack';
 export { About } from './About/About';
 export { Contact } from './Contact/Contact';
 export { Footer } from './Footer/Footer';
+export { AmbientLight } from './AmbientLight/AmbientLight';
