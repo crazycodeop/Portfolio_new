@@ -21,8 +21,8 @@ export const Hero: React.FC = () => {
     <section className="relative min-h-[82vh] sm:min-h-[88vh] flex flex-col justify-center pt-24 sm:pt-32 pb-16 sm:pb-20 px-5 sm:px-10 lg:px-16 max-w-7xl mx-auto">
       {/* Editorial Headline */}
       <div className="max-w-5xl">
-        <h1 className="text-[2.4rem] xs:text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[4.75rem] font-light tracking-tight leading-[1.1] sm:leading-[1.08] select-none">
-          <span className="block text-white font-light">Backend Engineer</span>
+        <h1 className="text-[2.2rem] xs:text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[4.75rem] font-light tracking-tight leading-[1.1] sm:leading-[1.08] select-none">
+          <span className="block text-white font-light">Full Stack Engineer</span>
           <span className="block text-neutral-400 font-light mt-1">
             &amp; AI Engineer
           </span>
