@@ -49,15 +49,15 @@ const stackData: StackCategory[] = [
   },
   {
     number: '04',
-    category: 'DATABASES & DISTRIBUTED STORAGE',
-    description: 'Relational databases, indexing strategies, vector stores, and high-performance caching.',
-    primary: ['PostgreSQL', 'Supabase', 'MySQL', 'Redis', 'AWS S3'],
-    secondary: ['HNSW Indexing', 'Schema Migrations', 'Connection Pooling', 'Row-Level Security (RLS)'],
+    category: 'DATABASES & CACHING',
+    description: 'Relational data modeling, vector extensions, indexing, and distributed cache layers.',
+    primary: ['PostgreSQL', 'pgvector', 'Supabase', 'Redis', 'SQLAlchemy 2.0'],
+    secondary: ['MySQL', 'Upstash Redis', 'Database Indexing', 'Transaction Isolation', 'Alembic Migrations'],
   },
   {
     number: '05',
-    category: 'CLOUD, DEVOPS & INFRASTRUCTURE',
-    description: 'Production cloud hosting, containerization, automated CI/CD pipelines, and server management.',
+    category: 'CLOUD & DEVOPS INFRASTRUCTURE',
+    description: 'Containerized deployment pipelines, cloud provisioning, and resilient server infrastructure.',
     primary: ['AWS (EC2, S3, RDS, IAM)', 'Docker', 'Linux / Unix', 'Jenkins CI/CD', 'Nginx'],
     secondary: ['Docker Compose', 'Serverless DBs', 'Cost & RAM Rightsizing', 'Uptime & SLA Monitoring'],
   },
@@ -86,18 +86,18 @@ const stackData: StackCategory[] = [
 
 export const Stack: React.FC = () => {
   return (
-    <section id="stack" className="py-16 sm:py-24 px-5 sm:px-10 lg:px-16 max-w-7xl mx-auto border-t border-[#e4e4e7] dark:border-[#3f3f46]">
+    <section id="stack" className="py-16 sm:py-24 px-5 sm:px-10 lg:px-16 max-w-7xl mx-auto border-t border-white/[0.06]">
       {/* Section Header */}
       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-12 sm:mb-16 gap-2 sm:gap-3">
         <div>
-          <span className="text-xs font-mono text-[#6b7280] dark:text-[#a1a1aa] tracking-[0.25em] uppercase block mb-1.5">
+          <span className="text-xs font-mono text-neutral-500 tracking-[0.25em] uppercase block mb-1.5">
             03 / TECHNICAL STACK
           </span>
-          <h2 className="text-[1.75rem] sm:text-4xl font-light text-[#1f2937] dark:text-[#e4e4e7] tracking-tight">
+          <h2 className="text-[1.75rem] sm:text-4xl font-light text-white tracking-tight">
             Core Disciplines &amp; Tooling
           </h2>
         </div>
-        <span className="text-xs font-mono text-[#6b7280] dark:text-[#a1a1aa] tracking-wider">
+        <span className="text-xs font-mono text-neutral-500 tracking-wider">
           SYSTEM ARCHITECTURE
         </span>
       </div>
@@ -107,28 +107,28 @@ export const Stack: React.FC = () => {
         {stackData.map((item) => (
           <div
             key={item.category}
-            className="group border-t border-[#e4e4e7] dark:border-[#3f3f46] pt-5 sm:pt-6 flex flex-col justify-between"
+            className="group border-t border-white/[0.08] pt-5 sm:pt-6 flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between mb-2.5 sm:mb-3">
-                <span className="text-xs sm:text-[13px] font-mono text-[#1f2937] dark:text-[#e4e4e7] tracking-wider uppercase font-medium">
+                <span className="text-xs sm:text-[13px] font-mono text-neutral-400 tracking-wider uppercase">
                   {item.number} &mdash; {item.category}
                 </span>
               </div>
-              <p className="text-[14px] sm:text-[15px] text-[#4b5563] dark:text-[#a1a1aa] leading-[1.65] mb-4 sm:mb-5">
+              <p className="text-[14px] sm:text-[15px] text-neutral-300 leading-[1.65] mb-4 sm:mb-5">
                 {item.description}
               </p>
 
               {/* Primary Technologies */}
               <div className="mb-3.5 sm:mb-4">
-                <span className="text-[10px] sm:text-[11px] font-mono text-[#6b7280] dark:text-[#a1a1aa] uppercase tracking-widest block mb-2 sm:mb-2.5">
+                <span className="text-[10px] sm:text-[11px] font-mono text-neutral-500 uppercase tracking-widest block mb-2 sm:mb-2.5">
                   PRIMARY FOCUS
                 </span>
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {item.primary.map((tech) => (
                     <span
                       key={tech}
-                      className="text-xs sm:text-[13px] font-mono px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-white dark:bg-[#202024] border border-[#e4e4e7] dark:border-[#3f3f46] text-[#1f2937] dark:text-[#e4e4e7] hover:border-[#c084fc] dark:hover:border-[#c084fc] transition-colors"
+                      className="text-xs sm:text-[13px] font-mono px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-white/[0.05] border border-white/[0.12] text-white hover:border-white/[0.25] transition-colors"
                     >
                       {tech}
                     </span>
@@ -139,14 +139,14 @@ export const Stack: React.FC = () => {
               {/* Secondary Technologies */}
               {item.secondary.length > 0 && (
                 <div>
-                  <span className="text-[10px] sm:text-[11px] font-mono text-[#6b7280] dark:text-[#a1a1aa] uppercase tracking-widest block mb-2">
+                  <span className="text-[10px] sm:text-[11px] font-mono text-neutral-500 uppercase tracking-widest block mb-2">
                     EXTENSIONS &amp; PRACTICES
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {item.secondary.map((tech) => (
                       <span
                         key={tech}
-                        className="text-[11px] sm:text-xs font-mono px-2 py-0.5 sm:px-2.5 sm:py-1 rounded bg-black/[0.02] dark:bg-white/[0.02] border border-[#e4e4e7] dark:border-[#3f3f46]/50 text-[#6b7280] dark:text-[#a1a1aa]"
+                        className="text-[11px] sm:text-xs font-mono px-2 py-0.5 sm:px-2.5 sm:py-1 rounded bg-white/[0.02] border border-white/[0.06] text-neutral-400"
                       >
                         {tech}
                       </span>
