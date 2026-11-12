@@ -6,10 +6,11 @@ import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
 
 import { NextSeo } from 'next-seo';
+import { ThemeProvider } from '../context/ThemeContext';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ThemeProvider>
       <NextSeo
         title="Roshan Yadav"
         defaultTitle="Roshan Yadav"
@@ -37,12 +38,12 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             name: 'theme-color',
-            content: '#09090b',
+            content: '#18181b',
           },
         ]}
       />
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   );
 }
 

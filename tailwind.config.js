@@ -8,12 +8,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#09090b',
-        surface: '#111113',
-        'surface-elevated': '#18181b',
-        border: 'rgba(255, 255, 255, 0.08)',
-        muted: '#9ca3af',
-        subtle: '#6b7280',
+        background: 'var(--bg-primary)',
+        surface: 'var(--bg-surface)',
+        'surface-elevated': 'var(--bg-surface-elevated)',
+        'surface-subtle': 'var(--bg-subtle)',
+        border: 'var(--border-subtle)',
+        'border-strong': 'var(--border-strong)',
+        'ink-primary': 'var(--text-primary)',
+        'ink-secondary': 'var(--text-secondary)',
+        'ink-muted': 'var(--text-muted)',
+        'accent-purple': 'var(--accent-purple)',
+        'accent-pink': 'var(--accent-pink)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
