@@ -1,9 +1,8 @@
-export { Navbar } from './Navbar/Navbar';
-export { Hero } from './Hero/Hero';
+export { Sidebar } from './Sidebar/Sidebar';
+export { About } from './About/About';
 export { Experience } from './Experience/Experience';
 export { Projects } from './Projects/Projects';
-export { Stack } from './Stack/Stack';
-export { About } from './About/About';
-export { Contact } from './Contact/Contact';
+export { Skills } from './Skills/Skills';
 export { Footer } from './Footer/Footer';
-export { AmbientLight } from './AmbientLight/AmbientLight';
+export { Spotlight } from './Spotlight/Spotlight';
+export { TimeTravel } from './TimeTravel/TimeTravel';

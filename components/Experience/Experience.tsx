@@ -1,111 +1,163 @@
 import React from 'react';
 
-const fullTimeExperience = {
-  company: 'VakilDesk Technologies Pvt. Ltd.',
-  role: 'Software Engineer',
-  period: 'OCT 2024 — OCT 2026',
-  type: 'Full-time',
-  location: 'Remote',
-  summary:
-    'Spearheaded core backend architecture, AWS cloud infrastructure, and enterprise GenAI systems for mission-critical B2B legal tech SaaS platforms.',
-  highlights: [
-    'Spearheaded end-to-end architecture and technical requirements for 4 enterprise B2B SaaS platforms using React and Django, delivering 100% on-time across 10+ corporate clients.',
-    'Engineered high-availability cloud infrastructure on AWS (EC2, S3, RDS) with Docker and Jenkins CI/CD—cutting deployment cycles by 35% with 99.9% SLA uptime, and reducing hosting costs by 50% via memory leak fixes and EC2 rightsizing (32 GiB to 8 GiB RAM).',
-    'Pioneered production GenAI RAG pipelines leveraging Gemini API, LangChain, and vector embeddings for semantic retrieval, reducing automated legal drafting turnaround time by 60%.',
-    'Orchestrated fault-tolerant asynchronous microservice workflows across DocuSign, eMudhra, GST, and WhiteBooks APIs via Celery, processing 10,000+ monthly transactions with zero data loss.',
-    'Optimized high-throughput PostgreSQL databases by refactoring complex Django ORM queries and implementing Redis caching layers, eliminating N+1 bottlenecks and slashing latency by 40%.',
-    'Developed WebDAV real-time document collaboration workflows for live MS Word editing and PDF rendering across 5,000+ legal documents, backed by automated Pytest suites (85%+ coverage) and multi-tenant security (JWT, OAuth2, RBAC).',
-  ],
-  techStack: [
-    'Python',
-    'Django',
-    'FastAPI',
-    'PostgreSQL',
-    'AWS (EC2, S3, RDS)',
-    'Docker',
-    'Celery',
-    'Redis',
-    'Gemini API',
-    'LangChain',
-    'Jenkins CI/CD',
-    'React',
-  ],
-};
+const experiences = [
+  {
+    period: '2024 — 2026',
+    fullPeriod: 'OCT 2024 — OCT 2026',
+    role: 'Software Engineer',
+    company: 'VakilDesk Technologies Pvt. Ltd.',
+    companyUrl: 'https://vakildesk.com',
+    location: 'Remote',
+    description:
+      'Spearheaded core backend architecture, high-availability AWS cloud infrastructure, and enterprise GenAI systems for mission-critical B2B legal tech SaaS platforms.',
+    highlights: [
+      'Architected and delivered 4 full-stack B2B SaaS platforms using Python, Django, DRF, and React, connecting responsive frontend interfaces to REST APIs across 10+ corporate clients with 100% on-time delivery.',
+      'Engineered cloud infrastructure on AWS (EC2, S3, RDS) with Docker and Jenkins CI/CD—cutting deployment cycles by 35% with 99.9% SLA uptime, and reducing hosting costs by 50% via memory leak fixes and EC2 rightsizing (32 GiB to 8 GiB RAM).',
+      'Pioneered production GenAI RAG pipelines using Gemini API, LangChain, and vector embeddings for semantic retrieval, reducing automated legal drafting turnaround time by 60%.',
+      'Orchestrated fault-tolerant asynchronous microservice workflows across DocuSign, eMudhra, GST, and WhiteBooks APIs via Celery, processing 10,000+ monthly transactions with zero data loss.',
+      'Optimized high-throughput PostgreSQL databases by refactoring complex Django ORM queries and implementing Redis caching layers, eliminating N+1 bottlenecks and slashing API latency by 40%.',
+      'Developed real-time document collaboration workflows using React, Django, and WebDAV for live MS Word editing and PDF generation across 5,000+ legal documents, backed by automated Pytest suites (85%+ coverage) and multi-tenant security (JWT, OAuth2, RBAC).',
+    ],
+    skills: [
+      'Python',
+      'Django',
+      'FastAPI',
+      'PostgreSQL',
+      'AWS (EC2, S3, RDS)',
+      'Docker',
+      'Celery',
+      'Redis',
+      'Gemini API',
+      'LangChain',
+      'React',
+      'Jenkins CI/CD',
+      'Pytest',
+    ],
+  },
+];
 
 export const Experience: React.FC = () => {
   return (
-    <section id="experience" className="py-16 sm:py-24 px-5 sm:px-10 lg:px-16 max-w-7xl mx-auto border-t border-white/[0.06]">
-      {/* Section Header */}
-      <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-12 sm:mb-16 gap-2 sm:gap-3">
-        <div>
-          <span className="text-xs font-mono text-neutral-500 tracking-[0.25em] uppercase block mb-1.5">
-            01 / EXPERIENCE
-          </span>
-          <h2 className="text-[1.75rem] sm:text-4xl font-light text-white tracking-tight">
-            Full-Time Engineering
-          </h2>
-        </div>
-        <span className="text-xs font-mono text-neutral-500 tracking-wider">
-          PROFESSIONAL TIMELINE
-        </span>
+    <section
+      id="experience"
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+      aria-label="Work experience"
+    >
+      {/* Sticky Mobile Header */}
+      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
+          Experience
+        </h2>
       </div>
 
-      {/* Main Experience Card */}
-      <div className="group pb-6 max-w-5xl">
-        {/* Role & Company Header */}
-        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 mb-5 sm:mb-6">
-          <div>
-            <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
-              <h3 className="text-2xl sm:text-3xl font-light text-white tracking-tight">
-                {fullTimeExperience.role}
-              </h3>
-              <span className="text-[10px] sm:text-[11px] font-mono tracking-wider uppercase px-2 py-0.5 rounded bg-white/[0.06] border border-white/[0.1] text-neutral-300">
-                {fullTimeExperience.type}
-              </span>
-            </div>
-            <p className="text-[15px] sm:text-base font-medium text-neutral-400 mt-1">
-              {fullTimeExperience.company} &middot;{' '}
-              <span className="text-neutral-500 font-normal">{fullTimeExperience.location}</span>
-            </p>
-          </div>
-          <div className="text-xs font-mono text-neutral-400 tracking-widest uppercase mt-1 sm:mt-0">
-            {fullTimeExperience.period}
-          </div>
-        </div>
+      <div>
+        <ol className="group/list">
+          {experiences.map((exp, idx) => (
+            <li key={idx} className="mb-12">
+              <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                {/* Hover Background Pill Card */}
+                <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
 
-        {/* High-level Summary */}
-        <p className="text-neutral-300 text-[15px] sm:text-[17px] leading-[1.65] font-light max-w-3xl mb-6 sm:mb-8">
-          {fullTimeExperience.summary}
-        </p>
+                {/* Left Date Column */}
+                <header
+                  className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
+                  aria-label={exp.fullPeriod}
+                >
+                  {exp.period}
+                </header>
 
-        {/* Structured Impact Highlights */}
-        <div className="space-y-3.5 sm:space-y-4 max-w-4xl pt-1">
-          {fullTimeExperience.highlights.map((item, index) => (
-            <div
-              key={index}
-              className="flex items-start text-[14.5px] sm:text-base text-neutral-300 leading-[1.65]"
-            >
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-neutral-500 mt-2.5 mr-3 flex-shrink-0" />
-              <span>{item}</span>
-            </div>
+                {/* Right Details Column */}
+                <div className="z-10 sm:col-span-6">
+                  <h3 className="font-medium leading-snug text-slate-200">
+                    <div>
+                      <a
+                        className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
+                        href={exp.companyUrl}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        aria-label={`${exp.role} at ${exp.company} (opens in a new tab)`}
+                      >
+                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
+                        <span>
+                          {exp.role} &middot;{' '}
+                          <span className="inline-block">
+                            {exp.company}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-normal text-slate-400">
+                    {exp.description}
+                  </p>
+
+                  <ul className="mt-3 space-y-2 text-xs sm:text-sm text-slate-400/90 leading-relaxed list-disc list-inside">
+                    {exp.highlights.slice(0, 3).map((item, hIdx) => (
+                      <li key={hIdx} className="marker:text-teal-300/80">
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Skills Pill Badges */}
+                  <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">
+                    {exp.skills.map((skill) => (
+                      <li key={skill} className="mr-1.5 mt-2">
+                        <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
+                          {skill}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </li>
           ))}
-        </div>
+        </ol>
 
-        {/* Technology Tags */}
-        <div className="mt-8 sm:mt-10 pt-6 border-t border-white/[0.06]">
-          <span className="text-[11px] font-mono text-neutral-500 uppercase tracking-widest block mb-3">
-            CORE TECHNOLOGIES
-          </span>
-          <div className="flex flex-wrap gap-2">
-            {fullTimeExperience.techStack.map((tech) => (
-              <span
-                key={tech}
-                className="text-[12px] sm:text-[13px] font-mono tracking-wide px-2.5 py-1 sm:px-3 sm:py-1.5 rounded bg-white/[0.04] border border-white/[0.08] text-neutral-300 hover:text-white hover:border-white/[0.16] transition-colors"
-              >
-                {tech}
+        {/* View Full Resume Link with Arrow */}
+        <div className="mt-12">
+          <a
+            className="inline-flex items-baseline font-semibold leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 font-medium group/link text-base"
+            href="/Roshan_Yadav_Resume.pdf"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="View Full Résumé (opens in a new tab)"
+          >
+            <span>
+              View Full{' '}
+              <span className="inline-block">
+                R&eacute;sum&eacute;
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                    clipRule="evenodd"
+                  />
+                </svg>
               </span>
-            ))}
-          </div>
+            </span>
+          </a>
         </div>
       </div>
     </section>

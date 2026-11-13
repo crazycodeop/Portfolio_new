@@ -4,6 +4,7 @@ import '@fontsource/inter/300.css';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
 
 import { NextSeo } from 'next-seo';
 
@@ -13,23 +14,23 @@ function MyApp({ Component, pageProps }: AppProps) {
       <NextSeo
         title="Roshan Yadav"
         defaultTitle="Roshan Yadav"
-        titleTemplate="Roshan Yadav"
-        description="Software Engineer with 2+ years of experience architecting scalable, cloud-native B2B SaaS platforms, distributed backend systems (Python, Django, FastAPI), AWS infrastructure, and enterprise GenAI architectures."
-        canonical="https://roshanyadav.dev"
+        titleTemplate="%s"
+        description="Roshan Yadav is a Full Stack Engineer & AI Engineer with 2+ years of experience architecting scalable cloud-native B2B SaaS platforms and enterprise GenAI architectures."
+        canonical="https://roshan-yadav.is-a.dev"
         openGraph={{
           type: 'website',
           locale: 'en_US',
-          url: 'https://roshanyadav.dev',
+          url: 'https://roshan-yadav.is-a.dev',
           title: 'Roshan Yadav',
           description:
-            'Software Engineer architecting scalable cloud-native B2B SaaS platforms and enterprise GenAI architectures.',
+            'Full Stack Engineer & AI Engineer with 2+ years architecting scalable cloud-native B2B SaaS platforms and enterprise GenAI architectures.',
           site_name: 'Roshan Yadav',
         }}
         additionalMetaTags={[
           {
             name: 'keywords',
             content:
-              'Roshan Yadav, Backend Engineer, AI Engineer, Python, Django, FastAPI, Celery, PostgreSQL, AWS, Docker, RAG, LangChain, Supabase, VakilDesk',
+              'Roshan Yadav, Full Stack Engineer, AI Engineer, Python, Django, FastAPI, Celery, PostgreSQL, React, Next.js, AWS, Docker, RAG, Gemini API',
           },
           {
             name: 'author',
@@ -37,7 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             name: 'theme-color',
-            content: '#09090b',
+            content: '#0f172a',
           },
         ]}
       />
