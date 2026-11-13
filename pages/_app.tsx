@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from 'react';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import '@fontsource/inter/300.css';
@@ -9,6 +10,52 @@ import '@fontsource/inter/700.css';
 import { NextSeo } from 'next-seo';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const glowRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const updateGlow = (x: number, y: number) => {
+      if (glowRef.current) {
+        glowRef.current.style.background = `radial-gradient(600px circle at ${x}px ${y}px, rgba(29, 78, 216, 0.22), transparent 80%)`;
+      }
+      document.documentElement.style.setProperty('--mouse-x', `${x}px`);
+      document.documentElement.style.setProperty('--mouse-y', `${y}px`);
+    };
+
+    // Center initial position on load
+    if (typeof window !== 'undefined') {
+      updateGlow(window.innerWidth / 2, window.innerHeight / 3);
+    }
+
+    const handleMove = (e: MouseEvent | TouchEvent | PointerEvent) => {
+      let clientX = (e as MouseEvent).clientX;
+      let clientY = (e as MouseEvent).clientY;
+
+      if (clientX === undefined && 'touches' in e && (e as TouchEvent).touches && (e as TouchEvent).touches[0]) {
+        clientX = (e as TouchEvent).touches[0].clientX;
+        clientY = (e as TouchEvent).touches[0].clientY;
+      }
+
+      if (clientX !== undefined && clientY !== undefined) {
+        updateGlow(clientX, clientY);
+      }
+    };
+
+    // Global listeners on both window and document to ensure events are never lost
+    window.addEventListener('mousemove', handleMove, { passive: true });
+    window.addEventListener('pointermove', handleMove, { passive: true });
+    document.addEventListener('mousemove', handleMove, { passive: true });
+    document.addEventListener('pointermove', handleMove, { passive: true });
+    window.addEventListener('touchmove', handleMove, { passive: true });
+
+    return () => {
+      window.removeEventListener('mousemove', handleMove);
+      window.removeEventListener('pointermove', handleMove);
+      document.removeEventListener('mousemove', handleMove);
+      document.removeEventListener('pointermove', handleMove);
+      window.removeEventListener('touchmove', handleMove);
+    };
+  }, []);
+
   return (
     <>
       <NextSeo
@@ -50,7 +97,35 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
         ]}
       />
-      <Component {...pageProps} />
+
+      {/* Root Layout Wrapper with slate-900 background */}
+      <div
+        className="group/spotlight relative min-h-screen bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900"
+        onMouseMove={(e) => {
+          if (glowRef.current) {
+            glowRef.current.style.background = `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(29, 78, 216, 0.22), transparent 80%)`;
+          }
+          document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+          document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+        }}
+      >
+        {/* Global Viewport Cursor Glow: Fixed overlay at z-30 directly matching Brittany Chiang's reference */}
+        <div
+          ref={glowRef}
+          id="global-cursor-glow"
+          className="pointer-events-none fixed inset-0 z-30 transition duration-300"
+          style={{
+            background:
+              'radial-gradient(600px circle at var(--mouse-x, 50vw) var(--mouse-y, 35vh), rgba(29, 78, 216, 0.22), transparent 80%)',
+          }}
+          aria-hidden="true"
+        />
+
+        {/* Page Content */}
+        <div className="relative">
+          <Component {...pageProps} />
+        </div>
+      </div>
     </>
   );
 }
