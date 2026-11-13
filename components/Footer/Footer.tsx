@@ -24,38 +24,16 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      <p className="leading-relaxed">
-        Loosely designed in{' '}
-        <span className="font-medium text-slate-400">Figma</span> and coded in{' '}
-        <span className="font-medium text-slate-400">Visual Studio Code</span>. Built with{' '}
+      <p className="leading-relaxed text-slate-400">
+        Made with ❤️ with{' '}
         <a
           href="https://nextjs.org/"
-          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300 transition-colors"
+          className="font-medium text-slate-300 hover:text-teal-300 focus-visible:text-teal-300 transition-colors underline underline-offset-4"
           target="_blank"
           rel="noreferrer noopener"
         >
           Next.js
-        </a>{' '}
-        and{' '}
-        <a
-          href="https://tailwindcss.com/"
-          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300 transition-colors"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Tailwind CSS
         </a>
-        , deployed with{' '}
-        <a
-          href="https://vercel.com/"
-          className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300 transition-colors"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Vercel
-        </a>
-        . All text is set in the{' '}
-        <span className="font-medium text-slate-400">Inter</span> typeface.
       </p>
 
       <p className="text-[11px] text-slate-600 font-mono">
