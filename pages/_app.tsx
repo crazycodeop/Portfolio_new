@@ -113,10 +113,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div
           ref={glowRef}
           id="global-cursor-glow"
-          className="pointer-events-none fixed inset-0 z-30 transition duration-300"
+          className="pointer-events-none fixed inset-0 z-30 transition duration-300 animate-glow"
           style={{
             background:
-              'radial-gradient(600px circle at var(--mouse-x, 50vw) var(--mouse-y, 35vh), rgba(29, 78, 216, 0.22), transparent 80%)',
+              'radial-gradient(600px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(29, 78, 216, 0.22), transparent 80%)',
           }}
           aria-hidden="true"
         />

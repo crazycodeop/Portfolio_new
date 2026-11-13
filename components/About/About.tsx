@@ -8,57 +8,61 @@ export const About: React.FC = () => {
       aria-label="About me"
     >
       {/* Sticky Mobile Header */}
-      <div className="sticky top-0 z-20 -mx-6 mb-3 w-screen bg-slate-900/75 px-6 py-3 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+      <div
+        className="sticky top-0 z-20 -mx-6 mb-3 w-screen bg-slate-900/75 px-6 py-3 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 animate-reveal"
+        style={{ animationDelay: '260ms' }}
+      >
         <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
           About
         </h2>
       </div>
 
       <div className="space-y-4 text-slate-400 leading-relaxed text-sm sm:text-base">
-        <p>
-          I&apos;m a software engineer who specializes in bridging distributed backend systems,
-          modern web applications, and enterprise-grade Generative AI. Over the past 2+ years, I
-          have architected, scaled, and deployed cloud-native B2B SaaS platforms serving corporate
-          clients with strict reliability and security requirements.
+        <p className="animate-reveal" style={{ animationDelay: '300ms' }}>
+          Hi there! I&apos;m Roshan, and I enjoy building things that solve real engineering
+          problems. I&apos;m a software engineer working across backend systems, modern web
+          applications, and Generative AI. I particularly enjoy designing systems that are scalable,
+          reliable, and practical &mdash; from distributed backend architectures to AI-powered
+          applications.
         </p>
 
-        <p>
-          At <span className="font-medium text-slate-200">VakilDesk Technologies</span>, I lead
-          core backend architecture and cloud infrastructure—shipping 4 enterprise
-          platforms using Python, Django, FastAPI, and React. My work focuses on solving concrete
-          engineering bottlenecks: optimizing PostgreSQL ORM queries and Redis caching to slash
-          latency by 40%, cutting AWS infrastructure costs by 50% through memory leak fixes and EC2
-          rightsizing, and orchestrating Celery microservice workflows across third-party APIs
-          (DocuSign, eMudhra, GST) processing 10,000+ monthly transactions with zero data loss.
+        <p className="animate-reveal" style={{ animationDelay: '340ms' }}>
+          Over the past 2+ years, I&apos;ve worked on building and scaling cloud-native B2B SaaS
+          platforms at <span className="font-medium text-slate-200">VakilDesk Technologies</span>. My
+          work spans Python, Django, FastAPI, PostgreSQL, Redis, Celery, AWS, and React. I&apos;ve
+          worked on enterprise platforms, optimized database queries and caching to improve
+          performance by 40%, reduced infrastructure costs by 50%, and built integrations with
+          services like DocuSign, eMudhra, and GST APIs.
         </p>
 
-        <p>
-          In Generative AI, my emphasis is on determinism and verifiable accuracy. Moving beyond
-          unreliable wrappers, I engineer production RAG architectures using the Gemini API,
-          LangChain, and pgvector embeddings with strict boundary defenses (
+        <p className="animate-reveal" style={{ animationDelay: '380ms' }}>
+          I&apos;m also interested in making Generative AI more reliable and useful in real-world
+          applications. I&apos;ve been building{' '}
           <a
             className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 transition-colors"
             href="#projects"
           >
             Docvyn
           </a>
-          ) and topological DAG workflow engines with Pydantic guardrails and distributed worker
-          heartbeats (
+          , a document intelligence platform powered by RAG, and{' '}
           <a
             className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 transition-colors"
             href="#projects"
           >
             FlowForge AI
           </a>
-          ).
+          , an AI workflow engine focused on structured execution and reliability. I enjoy exploring
+          the engineering behind these systems, particularly retrieval architectures, workflow
+          orchestration, and making AI outputs more predictable.
         </p>
 
-        <p>
+        <p className="animate-reveal" style={{ animationDelay: '420ms' }}>
           I graduated with a B.E. in Electronics &amp; Telecommunications from{' '}
-          <span className="text-slate-200 font-medium">Thadomal Shahani Engineering College</span>{' '}
-          (CGPA: 8.82 / 10.00). When I&apos;m away from my terminal, I enjoy studying distributed
-          consensus algorithms, exploring cloud architecture patterns, and following open-source AI
-          benchmarks.
+          <span className="font-medium text-slate-200">
+            Thadomal Shahani Engineering College
+          </span>
+          , with a CGPA of 8.82/10. Outside of work, I enjoy exploring distributed systems, cloud
+          architecture, open-source AI projects, and learning new technologies.
         </p>
       </div>
     </section>

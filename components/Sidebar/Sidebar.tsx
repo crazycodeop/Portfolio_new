@@ -20,15 +20,24 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
       <div>
         {/* Name & Heading */}
-        <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+        <h1
+          className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl animate-reveal"
+          style={{ animationDelay: '40ms' }}
+        >
           <Link href="/">Roshan Yadav</Link>
         </h1>
-        <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+        <h2
+          className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl animate-reveal"
+          style={{ animationDelay: '90ms' }}
+        >
           Full Stack Engineer &amp; AI Engineer
         </h2>
 
         {/* Exact Supporting Description */}
-        <div className="mt-4 max-w-xs space-y-1.5 text-sm leading-normal text-slate-400">
+        <div
+          className="mt-4 max-w-xs space-y-1.5 text-sm leading-normal text-slate-400 animate-reveal"
+          style={{ animationDelay: '140ms' }}
+        >
           <p>2+ years architecting scalable cloud-native B2B SaaS platforms.</p>
           <p>Specialized in distributed backend systems and enterprise GenAI architectures.</p>
         </div>
@@ -83,7 +92,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
       </div>
 
       {/* Social Links & Direct Contacts */}
-      <ul className="ml-1 mt-8 flex items-center gap-5" aria-label="Social media">
+      <ul
+        className="ml-1 mt-8 flex items-center gap-5 animate-reveal"
+        style={{ animationDelay: '200ms' }}
+        aria-label="Social media"
+      >
         <li>
           <a
             href="https://github.com/crazycodeop"

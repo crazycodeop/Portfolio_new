@@ -60,3 +60,43 @@ button:focus-visible {
   outline-offset: 3px;
   border-radius: 4px;
 }
+
+/* Brittany Chiang mobile initial entrance animation */
+@keyframes revealItem {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes glowEntrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-reveal {
+    animation: revealItem 0.35s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+  }
+  .animate-glow {
+    animation: glowEntrance 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
