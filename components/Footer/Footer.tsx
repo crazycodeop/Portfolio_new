@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export const Footer: React.FC = () => {
   return (
@@ -35,6 +36,17 @@ export const Footer: React.FC = () => {
           Next.js
         </a>
       </p>
+
+      {/* Subtle Personal Brand Signature */}
+      <div className="pt-1">
+        <Image
+          src="/cutout.png"
+          alt="Roshan Yadav Personal Brand Signature"
+          width={44}
+          height={44}
+          className="h-10 w-10 -ml-2 object-contain opacity-70 hover:opacity-100 transition-opacity"
+        />
+      </div>
 
       <p className="text-[11px] text-slate-600 font-mono">
         &copy; {new Date().getFullYear()} Roshan Yadav. All rights reserved.
