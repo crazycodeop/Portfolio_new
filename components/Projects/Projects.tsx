@@ -4,8 +4,8 @@ import Image from 'next/image';
 const projects = [
   {
     title: 'Docvyn · Document Intelligence Platform',
-    url: 'https://github.com/crazycodeop/docvyn',
-    image: '/images/docvyn.png',
+    url: 'https://docvyn.vercel.app',
+    image: '/docvyn/Rx60kOCLDA.png',
     description:
       'Enterprise multi-tenant document intelligence and Retrieval-Augmented Generation (RAG) platform. Indexes 384-dimensional FastEmbed vectors in Supabase PostgreSQL with strict SQL-level tenant isolation. Powered by Groq LPUs (Llama 3.3 70B) with automatic Gemini API fallback and prompt-injection boundary defense, validated by 48 automated Pytest, HTTPX, and Vitest test suites.',
     skills: [
@@ -24,8 +24,8 @@ const projects = [
   },
   {
     title: 'FlowForge AI · Visual AI Workflow Orchestrator',
-    url: 'https://github.com/crazycodeop/flowforge-ai',
-    image: '/images/flowforge.png',
+    url: 'https://flowforge-ai-iota.vercel.app',
+    image: '/flowforge/8Jh4uAv2vp.png',
     description:
       'Visual DAG workflow orchestration platform designing and executing multi-step AI pipelines with durable state persistence. Implements topological DAG scheduling (Kahn’s algorithm), sub-40ms async task dispatch via Upstash Redis, distributed Celery worker heartbeat leases, deterministic LLM guardrails with automated Pydantic schema repair, and 62 automated test suites.',
     skills: [
@@ -63,28 +63,14 @@ export const Projects: React.FC = () => {
           {projects.map((proj, idx) => (
             <li key={idx} className="mb-12">
               <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                {/* Glowy Card Hover Background */}
-                <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1),0_0_24px_-4px_rgba(45,212,191,0.15)] lg:group-hover:border lg:group-hover:border-teal-500/20 lg:group-hover:drop-shadow-lg" />
+                {/* Clean Specular Hover Surface — No Boxy Borders */}
+                <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
 
-                {/* Left Column: HD Project Screenshot */}
-                <div className="z-10 sm:order-1 sm:col-span-2">
-                  <div className="relative aspect-video w-full rounded border-2 border-slate-200/10 overflow-hidden bg-slate-950 transition group-hover:border-teal-400/30 sm:translate-y-1 shadow-md">
-                    <Image
-                      src={proj.image}
-                      alt={proj.title}
-                      width={400}
-                      height={225}
-                      className="w-full h-full object-cover object-top transition duration-300 group-hover:scale-105"
-                      priority={idx === 0}
-                    />
-                  </div>
-                </div>
-
-                {/* Right Column: Title, Description, Tags */}
-                <div className="z-10 sm:order-2 sm:col-span-6">
+                {/* Main Content Column (Title, Description, Mobile Image, and Tags) */}
+                <div className="z-10 sm:order-2 sm:col-span-6 flex flex-col">
                   <h3>
                     <a
-                      className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
+                      className="inline-flex items-baseline font-medium leading-snug text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
                       href={proj.url}
                       target="_blank"
                       rel="noreferrer noopener"
@@ -114,7 +100,19 @@ export const Projects: React.FC = () => {
                     {proj.description}
                   </p>
 
-                  <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
+                  {/* Mobile-Only Project Image: Placed directly under description, 200px wide, aligned left matching reference */}
+                  <div className="mt-4 sm:hidden">
+                    <Image
+                      src={proj.image}
+                      alt={proj.title}
+                      width={400}
+                      height={182}
+                      className="w-[200px] aspect-[1920/876] object-cover rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30"
+                      priority={idx === 0}
+                    />
+                  </div>
+
+                  <ul className="mt-3 flex flex-wrap" aria-label="Technologies used">
                     {proj.skills.map((skill) => (
                       <li key={skill} className="mr-1.5 mt-2">
                         <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
@@ -123,6 +121,18 @@ export const Projects: React.FC = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+
+                {/* Desktop-Only Left Column: HD Project Screenshot with White/Slate Outline */}
+                <div className="z-10 hidden sm:block sm:order-1 sm:col-span-2 sm:translate-y-1">
+                  <Image
+                    src={proj.image}
+                    alt={proj.title}
+                    width={400}
+                    height={182}
+                    className="w-full aspect-[1920/876] object-cover rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30"
+                    priority={idx === 0}
+                  />
                 </div>
               </div>
             </li>

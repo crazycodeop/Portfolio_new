@@ -9,15 +9,7 @@ const experiences = [
     company: 'VakilDesk Technologies Pvt. Ltd.',
     location: 'Remote',
     description:
-      'Spearheaded core backend architecture, high-availability AWS cloud infrastructure, and enterprise GenAI systems for mission-critical B2B legal tech SaaS platforms.',
-    highlights: [
-      'Architected and delivered 4 full-stack B2B SaaS platforms using Python, Django, DRF, and React, connecting responsive frontend interfaces to REST APIs across 10+ corporate clients with 100% on-time delivery.',
-      'Engineered cloud infrastructure on AWS (EC2, S3, RDS) with Docker and Jenkins CI/CD—cutting deployment cycles by 35% with 99.9% SLA uptime, and reducing hosting costs by 50% via memory leak fixes and EC2 rightsizing (32 GiB to 8 GiB RAM).',
-      'Pioneered production GenAI RAG pipelines using Gemini API, LangChain, and vector embeddings for semantic retrieval, reducing automated legal drafting turnaround time by 60%.',
-      'Orchestrated fault-tolerant asynchronous microservice workflows across DocuSign, eMudhra, GST, and WhiteBooks APIs via Celery, processing 10,000+ monthly transactions with zero data loss.',
-      'Optimized high-throughput PostgreSQL databases by refactoring complex Django ORM queries and implementing Redis caching layers, eliminating N+1 bottlenecks and slashing API latency by 40%.',
-      'Developed real-time document collaboration workflows using React, Django, and WebDAV for live MS Word editing and PDF generation across 5,000+ legal documents, backed by automated Pytest suites (85%+ coverage) and multi-tenant security (JWT, OAuth2, RBAC).',
-    ],
+      'Spearheaded core backend architecture, high-availability AWS cloud infrastructure, and enterprise GenAI systems for mission-critical B2B legal tech SaaS platforms. Architected and scaled 4 cloud-native B2B SaaS platforms with Python, Django, FastAPI, PostgreSQL, and Celery, optimizing query performance by 40% and cutting hosting costs by 50% across 10+ corporate clients.',
     skills: [
       'Python',
       'Django',
@@ -55,8 +47,8 @@ export const Experience: React.FC = () => {
           {experiences.map((exp, idx) => (
             <li key={idx} className="mb-12">
               <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                {/* Glowy Card Hover Background */}
-                <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1),0_0_24px_-4px_rgba(45,212,191,0.15)] lg:group-hover:border lg:group-hover:border-teal-500/20 lg:group-hover:drop-shadow-lg" />
+                {/* Clean Specular Hover Surface — No Boxy Borders */}
+                <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
 
                 {/* Left Date Column */}
                 <header
@@ -70,28 +62,40 @@ export const Experience: React.FC = () => {
                 <div className="z-10 sm:col-span-6">
                   <h3 className="font-medium leading-snug text-slate-200">
                     <div>
-                      <span className="inline-flex items-baseline font-medium leading-tight text-slate-200 text-base">
+                      <a
+                        className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
+                        href="https://vakildesk.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        aria-label={`${exp.role} at ${exp.company} (opens in a new tab)`}
+                      >
+                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
                         <span>
                           {exp.role} &middot;{' '}
-                          <span className="inline-block text-slate-200">
+                          <span className="inline-block">
                             {exp.company}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
                           </span>
                         </span>
-                      </span>
+                      </a>
                     </div>
                   </h3>
 
                   <p className="mt-2 text-sm leading-normal text-slate-400">
                     {exp.description}
                   </p>
-
-                  <ul className="mt-3 space-y-2 text-xs sm:text-sm text-slate-400/90 leading-relaxed list-disc list-inside">
-                    {exp.highlights.slice(0, 3).map((item, hIdx) => (
-                      <li key={hIdx} className="marker:text-teal-300/80">
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
 
                   {/* Skills Pill Badges */}
                   <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">

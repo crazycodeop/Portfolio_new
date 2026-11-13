@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const updateGlow = (x: number, y: number) => {
       if (glowRef.current) {
-        glowRef.current.style.background = `radial-gradient(600px circle at ${x}px ${y}px, rgba(29, 78, 216, 0.22), transparent 80%)`;
+        glowRef.current.style.background = `radial-gradient(600px circle at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
       }
       document.documentElement.style.setProperty('--mouse-x', `${x}px`);
       document.documentElement.style.setProperty('--mouse-y', `${y}px`);
@@ -103,7 +103,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         className="group/spotlight relative min-h-screen bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900"
         onMouseMove={(e) => {
           if (glowRef.current) {
-            glowRef.current.style.background = `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(29, 78, 216, 0.22), transparent 80%)`;
+            glowRef.current.style.background = `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
           }
           document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
           document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
@@ -116,7 +116,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           className="pointer-events-none fixed inset-0 z-30 transition duration-300 animate-glow"
           style={{
             background:
-              'radial-gradient(600px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(29, 78, 216, 0.22), transparent 80%)',
+              'radial-gradient(600px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(29, 78, 216, 0.15), transparent 80%)',
           }}
           aria-hidden="true"
         />

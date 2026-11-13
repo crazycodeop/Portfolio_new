@@ -1,0 +1,31 @@
+{
+  "name": "showcase-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"node server.cjs\" \"vite\"",
+    "dev:frontend": "vite",
+    "dev:server": "node server.cjs",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "html-to-image": "^1.11.11",
+    "lucide-react": "^0.468.0",
+    "playwright": "^1.49.1",
+    "portfolio": "file:..",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "vite": "^6.0.3"
+  }
+}
