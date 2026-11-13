@@ -37,8 +37,8 @@ const Home: NextPage = () => {
       {/* Interactive Cursor Spotlight Glow */}
       <Spotlight />
 
-      {/* Main Container */}
-      <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
+      {/* Main Container with z-10 Stacking Context above Spotlight */}
+      <div className="relative z-10 mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
         {/* Skip to Content for Accessibility */}
         <a
           href="#content"
