@@ -8,7 +8,6 @@ import {
   Skills,
   Footer,
   Spotlight,
-  TimeTravel,
 } from '../components';
 
 const Home: NextPage = () => {
@@ -39,14 +38,6 @@ const Home: NextPage = () => {
 
       {/* Main Container with z-10 Stacking Context above Spotlight */}
       <div className="relative z-10 mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
-        {/* Skip to Content for Accessibility */}
-        <a
-          href="#content"
-          className="absolute left-0 top-0 block -translate-x-full rounded bg-teal-400 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-900 focus-visible:translate-x-0 focus-visible:text-slate-900 z-50 transition-transform"
-        >
-          Skip to Content
-        </a>
-
         {/* Desktop Split View: Sticky Sidebar on Left, Scrolling Main on Right */}
         <div className="lg:flex lg:justify-between lg:gap-4">
           <Sidebar activeSection={activeSection} />
@@ -60,9 +51,6 @@ const Home: NextPage = () => {
           </main>
         </div>
       </div>
-
-      {/* Floating Animated Time Travel / Version History button */}
-      <TimeTravel />
     </div>
   );
 };

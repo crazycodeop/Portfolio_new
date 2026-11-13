@@ -25,6 +25,14 @@ function MyApp({ Component, pageProps }: AppProps) {
           description:
             'Full Stack Engineer & AI Engineer with 2+ years architecting scalable cloud-native B2B SaaS platforms and enterprise GenAI architectures.',
           site_name: 'Roshan Yadav',
+          images: [
+            {
+              url: 'https://roshan-yadav.is-a.dev/android-chrome-512x512.png',
+              width: 512,
+              height: 512,
+              alt: 'Roshan Yadav Logo',
+            },
+          ],
         }}
         additionalMetaTags={[
           {

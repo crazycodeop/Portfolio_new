@@ -23,16 +23,8 @@ export const About: React.FC = () => {
         </p>
 
         <p>
-          At{' '}
-          <a
-            className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 transition-colors"
-            href="https://vakildesk.com"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            VakilDesk Technologies
-          </a>
-          , I lead core backend architecture and cloud infrastructure—shipping 4 enterprise
+          At <span className="font-medium text-slate-200">VakilDesk Technologies</span>, I lead
+          core backend architecture and cloud infrastructure—shipping 4 enterprise
           platforms using Python, Django, FastAPI, and React. My work focuses on solving concrete
           engineering bottlenecks: optimizing PostgreSQL ORM queries and Redis caching to slash
           latency by 40%, cutting AWS infrastructure costs by 50% through memory leak fixes and EC2

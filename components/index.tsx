@@ -5,4 +5,3 @@ export { Projects } from './Projects/Projects';
 export { Skills } from './Skills/Skills';
 export { Footer } from './Footer/Footer';
 export { Spotlight } from './Spotlight/Spotlight';
-export { TimeTravel } from './TimeTravel/TimeTravel';
