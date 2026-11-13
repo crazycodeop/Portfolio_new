@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --mouse-x: 50vw;
+  --mouse-y: 50vh;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
