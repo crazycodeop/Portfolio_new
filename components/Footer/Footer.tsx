@@ -37,14 +37,14 @@ export const Footer: React.FC = () => {
         </a>
       </p>
 
-      {/* Subtle Personal Brand Signature */}
-      <div className="pt-1">
+      {/* Personal Brand Signature */}
+      <div className="pt-2">
         <Image
           src="/cutout.png"
           alt="Roshan Yadav Personal Brand Signature"
-          width={44}
-          height={44}
-          className="h-10 w-10 -ml-2 object-contain opacity-70 hover:opacity-100 transition-opacity"
+          width={72}
+          height={72}
+          className="h-14 w-14 sm:h-16 sm:w-16 -ml-3 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
         />
       </div>
 

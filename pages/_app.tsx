@@ -27,10 +27,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           site_name: 'Roshan Yadav',
           images: [
             {
-              url: 'https://roshan-yadav.is-a.dev/android-chrome-512x512.png',
-              width: 512,
-              height: 512,
-              alt: 'Roshan Yadav Logo',
+              url: 'https://roshan-yadav.is-a.dev/favicon4.png',
+              width: 1024,
+              height: 1024,
+              alt: 'Roshan Yadav',
             },
           ],
         }}
