@@ -69,7 +69,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
       </div>
 
       {/* Social Links & Direct Contacts */}
-      <ul className="ml-1 mt-8 flex items-center gap-5" aria-label="Social media">
+      <ul className="ml-1 mt-6 sm:mt-8 flex items-center gap-5" aria-label="Social media">
         <li>
           <a
             href="https://github.com/crazycodeop"

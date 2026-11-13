@@ -42,7 +42,7 @@ const Home: NextPage = () => {
         <div className="lg:flex lg:justify-between lg:gap-4">
           <Sidebar activeSection={activeSection} />
 
-          <main id="content" className="pt-24 lg:w-[52%] lg:py-24">
+          <main id="content" className="pt-6 sm:pt-10 lg:w-[52%] lg:py-24">
             <About />
             <Experience />
             <Projects />
