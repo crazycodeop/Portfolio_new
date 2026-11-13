@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="max-w-md pb-16 text-xs sm:text-sm text-slate-500 sm:pb-0 space-y-3">
+    <footer className="w-full pb-16 text-xs sm:text-sm text-slate-500 sm:pb-0 flex flex-col items-center justify-center text-center space-y-3">
       <p className="leading-relaxed text-slate-400">
         Made with ❤️ with{' '}
         <a
@@ -17,13 +17,13 @@ export const Footer: React.FC = () => {
       </p>
 
       {/* Brand Logo */}
-      <div>
+      <div className="flex items-center justify-center">
         <Image
           src="/cutout.png"
           alt="Roshan Yadav Logo"
           width={72}
           height={72}
-          className="h-14 w-14 sm:h-16 sm:w-16 -ml-3 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+          className="h-14 w-14 sm:h-16 sm:w-16 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
         />
       </div>
     </footer>
