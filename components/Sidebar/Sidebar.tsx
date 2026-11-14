@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { VscGithubAlt } from 'react-icons/vsc';
-import { GrLinkedinOption } from 'react-icons/gr';
-import { FiMail, FiPhone, FiFileText } from 'react-icons/fi';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaFileAlt } from 'react-icons/fa';
 
 interface SidebarProps {
   activeSection: string;
@@ -33,9 +31,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
           Full Stack Engineer &amp; AI Engineer
         </h2>
 
-        {/* Exact Supporting Description */}
+        {/* Exact Supporting Description — 16px text-base matching Brittany reference */}
         <div
-          className="mt-4 max-w-xs space-y-1.5 text-sm leading-normal text-slate-400 animate-reveal"
+          className="mt-4 max-w-xs space-y-1.5 text-base leading-normal text-slate-400 animate-reveal"
           style={{ animationDelay: '140ms' }}
         >
           <p>2+ years architecting scalable cloud-native B2B SaaS platforms.</p>
@@ -91,13 +89,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
         </nav>
       </div>
 
-      {/* Social Links & Direct Contacts */}
+      {/* Social Links & Direct Contacts — Filled icons matching reference */}
       <ul
         className="ml-1 mt-8 flex items-center gap-5 animate-reveal"
         style={{ animationDelay: '200ms' }}
         aria-label="Social media"
       >
-        <li>
+        <li className="shrink-0">
           <a
             href="https://github.com/crazycodeop"
             target="_blank"
@@ -107,10 +105,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
             title="GitHub"
           >
             <span className="sr-only">GitHub</span>
-            <VscGithubAlt className="h-6 w-6" />
+            <FaGithub className="h-6 w-6" />
           </a>
         </li>
-        <li>
+        <li className="shrink-0">
           <a
             href="https://linkedin.com/in/roshanyadav026"
             target="_blank"
@@ -120,10 +118,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
             title="LinkedIn"
           >
             <span className="sr-only">LinkedIn</span>
-            <GrLinkedinOption className="h-5 w-5" />
+            <FaLinkedin className="h-6 w-6" />
           </a>
         </li>
-        <li>
+        <li className="shrink-0">
           <a
             href="mailto:roshany.ir.ry@gmail.com"
             className="block text-slate-400 hover:text-slate-200 transition-colors"
@@ -131,10 +129,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
             title="Email"
           >
             <span className="sr-only">Email</span>
-            <FiMail className="h-5 w-5" />
+            <FaEnvelope className="h-6 w-6" />
           </a>
         </li>
-        <li>
+        <li className="shrink-0">
           <a
             href="tel:+919834905805"
             className="block text-slate-400 hover:text-slate-200 transition-colors"
@@ -142,10 +140,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
             title="Phone"
           >
             <span className="sr-only">Phone</span>
-            <FiPhone className="h-5 w-5" />
+            <FaPhone className="h-5 w-5" />
           </a>
         </li>
-        <li>
+        <li className="shrink-0">
           <a
             href="/Roshan_Yadav_Resume.pdf"
             target="_blank"
@@ -155,7 +153,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeSection }) => {
             title="Resume PDF"
           >
             <span className="sr-only">Resume PDF</span>
-            <FiFileText className="h-5 w-5" />
+            <FaFileAlt className="h-6 w-6" />
           </a>
         </li>
       </ul>

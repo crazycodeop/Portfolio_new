@@ -9,7 +9,7 @@ export const About: React.FC = () => {
     >
       {/* Sticky Mobile Header */}
       <div
-        className="sticky top-0 z-20 -mx-6 mb-3 w-screen bg-slate-900/75 px-6 py-3 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 animate-reveal"
+        className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 animate-reveal"
         style={{ animationDelay: '260ms' }}
       >
         <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
@@ -17,7 +17,7 @@ export const About: React.FC = () => {
         </h2>
       </div>
 
-      <div className="space-y-4 text-slate-400 leading-relaxed text-sm sm:text-base">
+      <div className="space-y-4 text-slate-400 leading-relaxed text-base">
         <p className="animate-reveal" style={{ animationDelay: '300ms' }}>
           Hi there! I&apos;m Roshan, and I enjoy building things that solve real engineering
           problems. I&apos;m a software engineer working across backend systems, modern web
