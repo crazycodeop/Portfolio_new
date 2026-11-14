@@ -9,7 +9,12 @@ const experiences = [
     company: 'VakilDesk Technologies Pvt. Ltd.',
     location: 'Remote',
     description:
-      'Spearheaded core backend architecture, high-availability AWS cloud infrastructure, and enterprise GenAI systems for mission-critical B2B legal tech SaaS platforms. Architected and scaled 4 cloud-native B2B SaaS platforms with Python, Django, FastAPI, PostgreSQL, and Celery, optimizing query performance by 40% and cutting hosting costs by 50% across 10+ corporate clients.',
+      'Spearheaded core backend architecture, high-availability AWS cloud infrastructure, and enterprise GenAI systems for mission-critical B2B legal tech SaaS platforms.',
+    highlights: [
+      'Architected and delivered 4 full-stack B2B SaaS platforms using Python, Django, DRF, and React, connecting responsive frontend interfaces to REST APIs across 10+ corporate clients with 100% on-time delivery.',
+      'Engineered cloud infrastructure on AWS (EC2, S3, RDS) with Docker and Jenkins CI/CD—cutting deployment cycles by 35% with 99.9% SLA uptime, and reducing hosting costs by 50% via memory leak fixes and EC2 rightsizing (32 GiB to 8 GiB RAM).',
+      'Pioneered production GenAI RAG pipelines using Gemini API, LangChain, and vector embeddings for semantic retrieval, reducing automated legal drafting turnaround time by 60%.',
+    ],
     skills: [
       'Python',
       'Django',
@@ -96,6 +101,14 @@ export const Experience: React.FC = () => {
                   <p className="mt-2 text-sm leading-normal text-slate-400">
                     {exp.description}
                   </p>
+
+                  <ul className="mt-3 space-y-2 text-xs sm:text-sm text-slate-400/90 leading-relaxed list-disc list-inside">
+                    {exp.highlights.map((item, hIdx) => (
+                      <li key={hIdx} className="marker:text-teal-300/80">
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
 
                   {/* Skills Pill Badges */}
                   <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">
